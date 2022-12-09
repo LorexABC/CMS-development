@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Learning Management System</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link rel="stylesheet" href="./dist/css/grapes.min.css">
+  <link rel="stylesheet" href="./dist/css/main.css">
+  <link rel="stylesheet" href="./dist/css/solid.css">
+  <link rel="stylesheet" href="./dist/css/all.css">
+  <link rel="stylesheet" href="./dist/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://pagecdn.io/lib/easyfonts/fonts.css">
+  
+
+
+
+  <script src="./dist/js/all.js"></script>
+  <script src="./dist/js/brands.min.js"></script>
+  <script src="./dist/js/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Delete Canvas
+      </div>
+      <div class="modal-body">
+        <p>Are you sure to clean the canvas?</p>
+      </div>
+      <div class="modal-footer">
+        <button class="cancel_btn" id = "clear_btn">Cancel</button>
+        <button class="delete_btn" id= "btn-delete">Delete</button>
+      </div>
+    </div>
+  </div>
+  <div class="header">
+    <div class="headerLeftContent">
+      <a href="#" class="logo">CompanyLogo</a>
+      <a style="font-size:18px;cursor:pointer; color: white;" id="view_span">&#9776; View</a>
+    </div>
+    
+    <div class="headerRightContent">
+      <div class="tabIndex">
+        <div class="horizontal-list jUgyok" id="layer_list"></div>
+      </div>
+      <div class="header-right">
+        <div class="panel__basic-actions" style="background-color: rgb(20, 45, 99) !important;"></div>
+        <div class="panel__devices" style="background-color: rgb(20, 45, 99) !important;"></div>
+        <div class="panel__options" style="background-color: rgb(20, 45, 99) !important;"></div>
+      </div>
+    </div>
+  </div>
+  <div class="editor-row" id="main">
+    <div class="panel__right sidenav" id="mySidenav">
+      <div id="content_style" class="content-page">
+        <span style="float: left;cursor: pointer;margin: 0.8rem;text-transform: capitalize;" id="back_layers">
+        </span>
+        <div class="styles-container"></div>
+      </div>
+      <div class="container" id="content_all">
+        <div class="tab-wrap">
+          <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+          <label for="tab1"
+            style="color: rgb(20, 158, 252);font-family: 'Quicksand', sans-serif;font-weight: bold;">Elements</label>
+
+          <input type="radio" id="tab2" name="tabGroup1" class="tab">
+          <label for="tab2"
+            style="color: rgb(20, 158, 252);font-family: 'Quicksand', sans-serif;font-weight: bold;">Blocks</label>
+
+          <div class="tab__content">
+            <div class="panel__switcher"></div>
+            <div id="content_block" class="content-page active">
+              <p class="blocks_tags">Text</p>
+              <div id="texts" class="blocks_content"></div>
+              <p class="blocks_tags">Media</p>
+              <div id="medias" class="blocks_content"></div>
+              <p class="blocks_tags">Column layout</p>
+              <div id="columns" class="blocks_content"></div>
+              <p class="blocks_tags">Form</p>
+              <div id="forms" class="blocks_content"></div>
+              <p class="blocks_tags">Social</p>
+              <div id="social" class="blocks_content"></div>
+              <p class="blocks_tags">Other</p>
+              <div id="others" class="blocks_content"></div>
+            </div>
+          </div>
+
+          <div class="tab__content">
+            <div class="item">
+              <a class="sub-btn">My Blocks</a>
+              <div class="sub-menu" style="display: none; margin: 0;">
+                <div id="my_blocks"></div>
+              </div>
+            </div>
+            <div class="item">
+              <a class="sub-btn">Opt-in forms</a>
+              <div class="sub-menu" style="display: none;">
+                <div id="my_form"></div>
+              </div>
+            </div>
+            <div class="item">
+              <a class="sub-btn">Features</a>
+              <div class="sub-menu" style="display: none;">
+                <div id="my_feature"></div>
+              </div>
+            </div>
+            <div class="item">
+              <a class="sub-btn">Page footers</a>
+              <div class="sub-menu" style="display: none;">
+                <div id="my_footer"></div>
+              </div>
+            </div>
+            <div class="item">
+              <a class="sub-btn">Team presentation</a>
+              <div class="sub-menu" style="display: none;">
+                <div id="my_team"></div>
+              </div>
+            </div>
+            <div class="item">
+              <a class="sub-btn">Welcome</a>
+              <div class="sub-menu" style="display: none;">
+                <div id="my_welcome"></div>
+              </div>
+            </div>
+            <div class="item">
+              <a class="sub-btn">Price plans</a>
+              <div class="sub-menu" style="display: none;">
+                <div id="my_price"></div>
+              </div>
+            </div>
+            <div class="item">
+              <a class="sub-btn">Page headers</a>
+              <div class="sub-menu" style="display: none;">
+                <div id="my_header"></div>
+              </div>
+            </div>
+            <div class="item">
+              <a class="sub-btn">Testimonials</a>
+              <div class="sub-menu" style="display: none;">
+                <div id="my_test"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="editor-canvas">
+      <div id="gjs" style="height: 595px !important">
+        <h1>Hello World Component!</h1>
+      </div>
+    </div>
+  </div>
+
+  <script src="./dist/js/grapes-custom-code.min.js"></script>
+  <script src="./dist/js/underscore.js"></script>
+  <script src="./dist/js/grapesjs-component-countdown.min.js"></script>
+  <script src="./dist/js/grapesjs-preset-webpage.min.js"></script>
+  <script src="./dist/js/grapesjs-plugin-export.min.js"></script>
+  <script src="./dist/js/grapesjs-blocks-basic.min.js"></script>
+  <script src="./dist/js/main.js"></script>
+  <script src="./dist/js/grapes.min.js"></script>
+
+  <!-- <script src="./dist/js/editor_rte.js"></script> -->
+  <!-- <script src="./dist/js/editor_blocks.js"></script> -->
+
+
+
+
+</body>
+
+</html>
